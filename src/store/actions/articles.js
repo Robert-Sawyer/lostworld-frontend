@@ -28,15 +28,15 @@ export const fetchArticles = () => {
 
         await axios({
             method: 'get',
-            url: `${API_URL}/users/getArticles`,
+            url: `${API_URL}/articles/checkAllForLoggedUser`,
             headers: {'Authorization': 'Bearer ' + localStorage.getItem('token')}
         }).then(function (response) {
             //handle success
             console.log(response);
-            return response;
-            // dispatch(fetchTravelPlansSuccess(response.data));
+            dispatch(fetchArticlesSuccess(response.data));
         }).catch(err => {
-                dispatch(fetchArticlesFail(err.response.data.error))
+            //do ustalenia co wyświetlać w razie błędu
+            // dispatch(fetchArticlesFail(err.response.data.error))
             });
     }
 }

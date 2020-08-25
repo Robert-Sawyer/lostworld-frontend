@@ -11,7 +11,7 @@ const fetchArticlesStart = (state) => {
 };
 
 const fetchArticlesSuccess = (state, action) => {
-    return updateObject(state, {articles: action.articles});
+    return updateObject(state, {articles: action.articles, loading: false});
 };
 
 const fetchArticlesFail = (state) => {

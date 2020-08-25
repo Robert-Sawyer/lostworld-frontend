@@ -15,9 +15,9 @@ const ArticlesProfile = props => {
     let articles = <Spinner/>
 
     if (!props.loading) {
-        articles = props.articles.map(art => (
+        articles = props.articles.response.map(art => (
             <li>
-                {art.articles}
+                {art.title}
             </li>
         ))
     }
@@ -39,7 +39,7 @@ const ArticlesProfile = props => {
 const mapStateToProps = state => {
     return {
         articles: state.articles.articles,
-        loading: state.articles.articles
+        loading: state.articles.loading
     };
 };
 
