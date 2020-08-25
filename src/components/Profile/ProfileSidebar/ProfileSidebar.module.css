@@ -1,8 +1,9 @@
 .Sidebar {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 1.1;
     height: 700px;
+    font-family: "Berlin Sans FB Demi", cursive;
     /*background: linear-gradient(#eeeeee, dimgrey);*/
     /*border-right: 2px solid black;*/
     text-align: center;
@@ -20,19 +21,22 @@
 }
 
 .Motto {
-    padding: 20px 0;
-}
-
-.Motto span {
-    font-family: "Berlin Sans FB Demi", cursive;
+    padding: 16px 3px;
 }
 
 .UserInfo {
-    height: 150px;
+    padding: 16px 5px;
     border-top: 2px solid black;
+    text-align: left;
+    font-size: 15px;
+}
+
+.UserInfo span {
+    font-weight: bold;
 }
 
 .Friends {
     border-top: 2px solid black;
-    height: 200px;
+    text-align: left;
+    padding: 16px 5px;
 }
