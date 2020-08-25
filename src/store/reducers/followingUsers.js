@@ -11,7 +11,7 @@ const fetchCountriesStart = (state) => {
 };
 
 const fetchCountriesSuccess = (state, action) => {
-    return updateObject(state, {followingUsers: action.followingUsers})
+    return updateObject(state, {followingUsers: action.followingUsers, loading: false})
 }
 
 const fetchCountriesFail = (state) => {

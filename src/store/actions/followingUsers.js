@@ -28,17 +28,15 @@ export const fetchFollowingUsers = () => {
 
         await axios({
             method: 'get',
-            url: `${API_URL}/users/getObservedUsers`,
+            url: `${API_URL}/followingusers/checkAllForLoggedUser`,
             headers: {'Authorization': 'Bearer ' + localStorage.getItem('token')}
         }).then(function (response) {
             //handle success
             console.log(response);
-            return response;
-            //TODO sprawdzić, czy poniższe rozwiązanie zadziała
-            // dispatch(fetchFollowingUsersSuccess(response.data));
+            dispatch(fetchFollowingUsersSuccess(response.data));
         })
             .catch(err => {
-                dispatch(fetchFollowingUsersFail(err.response.data.error))
+                // dispatch(fetchFollowingUsersFail(err.response.data.error))
             });
     }
 }

@@ -14,8 +14,9 @@ const FollowingUsersProfile = props => {
     let users = <Spinner/>
 
     if (!props.loading) {
-        users = props.followingUsers.map(user => (
+        users = props.followingUsers.response.map(user => (
             <li>
+                {/*jak się nazywa pole z nazwą usera w jsonie*/}
                 {user.username}
             </li>
         ))
