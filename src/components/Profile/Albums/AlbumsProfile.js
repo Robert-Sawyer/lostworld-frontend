@@ -16,9 +16,10 @@ const AlbumsProfile = props => {
     let albums = <Spinner/>
 
     if (!props.loading) {
-        albums = props.albums.map(alb => (
+        albums = props.albums.response.map(alb => (
             <li>
-                {alb.albums}
+                {/*jak się nazywa to pole w JSONie z którego mam pobrać dane*/}
+                {alb.title}
             </li>
             )
         )

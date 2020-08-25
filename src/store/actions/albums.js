@@ -28,13 +28,13 @@ export const fetchAlbums = () => {
 
         await axios({
             method: 'get',
-            url: `${API_URL}/users/getAlbums`,
+            url: `${API_URL}/albums/checkAllForLoggedUser`,
             headers: {'Authorization' : 'Bearer ' + localStorage.getItem('token')}
         }).then(function (response) {
             console.log(response)
             dispatch(fetchAlbumsSuccess(response.data))
         }).catch(err => {
-            dispatch(fetchAlbumsFail(err.response.data.error))
+            // dispatch(fetchAlbumsFail(err.response.data.error))
         })
     }
 }

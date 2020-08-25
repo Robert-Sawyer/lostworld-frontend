@@ -11,7 +11,7 @@ const fetchAlbumsStart = (state) => {
 };
 
 const fetchAlbumsSuccess = (state, action) => {
-    return updateObject(state, {albums: action.albums});
+    return updateObject(state, {albums: action.albums, loading: false});
 };
 
 const fetchAlbumsFail = (state) => {
