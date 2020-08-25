@@ -11,7 +11,7 @@ const fetchTravelPlansStart = (state) => {
 };
 
 const fetchTravelPlansSuccess = (state, action) => {
-    return updateObject(state, {travelPlans: action.plans});
+    return updateObject(state, {travelPlans: action.plans, loading: false});
 };
 
 const fetchTravelPlansFail = (state) => {

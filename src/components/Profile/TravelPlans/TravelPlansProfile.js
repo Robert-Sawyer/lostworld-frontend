@@ -15,10 +15,9 @@ const TravelPlans = props => {
     let plans = <Spinner/>
 
     if (!props.loading) {
-        plans = props.travelPlans.map(plans => (
+        plans = props.travelPlans.response.map(plans => (
             <li>
-                {/*DO USTALENIA Z WOJTKIEM JAK SIĘ NAZYWA TO POLE W JSONIE*/}
-                {plans.travelPlans}
+                {plans.title}
             </li>
         ))
     }
